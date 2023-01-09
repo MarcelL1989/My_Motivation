@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/motivationskategorieBild"
+        android:layout_width="300dp"
+        android:layout_height="280dp"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginStart="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/homepicture"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/motivationskategorrieText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Motivationskategorie"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/motivationskategorieBild"
+        app:layout_constraintEnd_toEndOf="@+id/motivationskategorieBild"
+        app:layout_constraintStart_toStartOf="@+id/motivationskategorieBild"
+        app:layout_constraintTop_toTopOf="@+id/motivationskategorieBild" />
+</androidx.constraintlayout.widget.ConstraintLayout>
