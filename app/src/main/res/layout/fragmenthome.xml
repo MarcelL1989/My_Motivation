@@ -49,7 +49,7 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="70dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="Wofür möchtest du heute motiviert werden:)?"
+        android:text="Wofür möchtest du heute motiviert werden?"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold|italic"
