@@ -10,7 +10,7 @@ import com.example.my_motivation.databinding.FragmentDetailBinding
 
 class DetailFragment: Fragment() {
     lateinit var binding: FragmentDetailBinding
-    val viewModel: MainviewModel by viewModels()
+    //val viewModel: MainviewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
