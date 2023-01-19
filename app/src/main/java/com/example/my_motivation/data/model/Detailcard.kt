@@ -1,4 +1,7 @@
 package com.example.my_motivation.data.model
 
-class Detailcard {
-}
+import android.widget.TextView
+
+data class Detailcard (
+    val picture: Int, val text: String
+        )

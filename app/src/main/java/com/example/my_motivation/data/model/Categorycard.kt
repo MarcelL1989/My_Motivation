@@ -1,4 +1,5 @@
 package com.example.my_motivation.data.model
 
-class Categorycard {
-}
+data class Categorycard (
+    val text: String, val picture: Int
+        )
