@@ -6,13 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.my_motivation.data.adapter.CategoryCardAdapter
+import com.example.my_motivation.data.remote.Repository
 import com.example.my_motivation.databinding.FragmentHomeBinding
 
 class HomeFragment: Fragment() {
     lateinit var binding: FragmentHomeBinding
-    // todo val viewModel: MainviewModel by viewModels()
+      //val viewModel: MainviewModel by viewModels()
+        var repository = Repository()
 
-    override fun onCreateView(
+
+        override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,6 +29,8 @@ class HomeFragment: Fragment() {
         val recyclerView = binding.homeRecycler
         val categoryAdapter = CategoryCardAdapter()
         recyclerView.adapter = categoryAdapter
+        var cardList = repository.loadcategorycard()
+        categoryAdapter.update(cardList)
 
     }
 
