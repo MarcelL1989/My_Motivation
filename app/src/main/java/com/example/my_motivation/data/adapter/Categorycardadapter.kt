@@ -8,13 +8,16 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.my_motivation.R
 import com.example.my_motivation.data.model.Categorycard
+import com.squareup.picasso.Picasso
 
 class CategoryCardAdapter(): RecyclerView.Adapter<CategoryCardAdapter.ItemViewHolder>() {
     private var dataset =listOf<Categorycard>()
+
     fun update(newList:List<Categorycard>) {
         dataset=newList
         notifyDataSetChanged()
     }
+
     class ItemViewHolder(view: View): RecyclerView.ViewHolder(view) {
         var iv: ImageView = view.findViewById(R.id.motivationskategorieBild)
         var text: TextView = view.findViewById(R.id.motivationskategorieText)
@@ -26,7 +29,7 @@ class CategoryCardAdapter(): RecyclerView.Adapter<CategoryCardAdapter.ItemViewHo
     }
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         var category= dataset[position]
-        holder.iv.setImageResource(category.picture)
+        Picasso.get().load(category.picture).fit().centerInside().into(holder.iv)
         holder.text.text = category.text
 
 
