@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "spruch": "â€žMach es, bevor du bereust, es nicht getan zu haben.â€œ",
+    "kategorie": "Alltag",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Alltag1.jpg"
+  },
+  {
+    "id": 2,
+    "spruch": "â€žDas kalte Wasser wird nicht wÃ¤rmer, wenn du spÃ¤ter springst.â€œ",
+    "kategorie": "Alltag",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Alltag2.jpg"
+  },
+  {
+    "id": 3,
+    "spruch": "â€žJeder Tag ist eine neue Chance, das zu tun, was du mÃ¶chtest.â€œ",
+    "kategorie": "Alltag",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Alltag3.jpg"
+  },
+  {
+    "id": 4,
+    "spruch": "â€žZeit ist begrenzt, also verschwende sie nicht, um das Leben eines anderen zu leben.â€œ",
+    "kategorie": "Alltag",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Alltag4.jpg"
+  },
+  {
+    "id": 5,
+    "spruch": "â€žEines Tages wirst du aufwachen und keine Zeit mehr fÃ¼r die Dinge haben, die du immer tun wolltest. Tuâ€˜ sie jetzt!â€œ",
+    "kategorie": "Alltag",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Alltag5.jpg"
+  },
+  {
+    "id": 6,
+    "spruch": "â€žDein KÃ¶rper kann alles schaffen. Es ist dein Geist, den du Ã¼berzeugen musst.â€œ",
+    "kategorie": "Sport und Fitness",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Sport1.jpg"
+  },
+  {
+    "id": 7,
+    "spruch": "â€žEs ist nie zu spÃ¤t, etwas zu Ã¤ndern.â€œ",
+    "kategorie": "Sport und Fitness",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Sport2.jpg"
+  },
+  {
+    "id": 8,
+    "spruch": "â€žDu bist nur ein Training von guter Laune entfernt!â€œ",
+    "kategorie": "Sport und Fitness",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Sport3.jpg"
+  },
+  {
+    "id": 9,
+    "spruch": "â€žWie langsam du auch lÃ¤ufst, du schlÃ¤gst alle, die zu Hause bleiben.â€œ",
+    "kategorie": "Sport und Fitness",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Sport4.jpg"
+  },
+  {
+    "id": 10,
+    "spruch": "â€žSorge dich um deinen KÃ¶rper. Er ist der einzige Ort, den du zum Leben hast.â€œ",
+    "kategorie": "Sport und Fitness",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Sport5.jpg"
+  },
+  {
+    "id": 11,
+    "spruch": "â€žJeden Morgen werden neue Chancen geboren.â€œ",
+    "kategorie": "Mut finden",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Mut1.jpg"
+  },
+  {
+    "id": 12,
+    "spruch": "â€žEntweder wir finden einen Weg oder wir machen einen.â€œ",
+    "kategorie": "Mut finden",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Mut2.jpg"
+  },
+  {
+    "id": 13,
+    "spruch": "â€žDu kannst die Wellen nicht stoppen. Aber du kannst lernen, auf ihnen zu surfen.â€œ",
+    "kategorie": "Mut finden",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Mut3.jpg"
+  },
+  {
+    "id": 14,
+    "spruch": "â€žNicht die Menschen, die immer gewinnen, sind die stÃ¤rksten, sondern die, die niemals aufgeben!â€œ",
+    "kategorie": "Mut finden",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Mut4.jpg"
+  },
+  {
+    "id": 15,
+    "spruch": "â€žHindernisse und Schwierigkeiten sind Stufen, auf denen wir in die HÃ¶he steigen.â€œ",
+    "kategorie": "Mut finden",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Mut5.jpg"
+  },
+  {
+    "id": 16,
+    "spruch": "â€žDer sicherste Weg zum Erfolg ist immer, es noch einmal zu versuchen.â€œ",
+    "kategorie": "Durchhalten und Erfolg",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Durchhalten1.jpg"
+  },
+  {
+    "id": 17,
+    "spruch": "â€žEs ist immer zu frÃ¼h, um aufzugeben.â€œ",
+    "kategorie": "Durchhalten und Erfolg",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Durchhalten2.jpg"
+  },
+  {
+    "id": 18,
+    "spruch": "â€žWenn alles gegen dich zu laufen scheint, erinnere dich daran, dass das Flugzeug gegen den Wind abhebt, nicht mit ihm.â€œ",
+    "kategorie": "Durchhalten und Erfolg",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Durchhalten3.jpg"
+  },
+  {
+    "id": 19,
+    "spruch": "Versuche nicht zu viele Dinge auf einmal zu tun. Wisse, was du willst, was die wichtigste Sache heute und morgen ist. BemÃ¼he dich beharrlich und schaffe esâ€œ",
+    "kategorie": "Durchhalten und Erfolg",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Durchhalten4.jpg"
+  },
+  {
+    "id": 20,
+    "spruch": "â€žEs ist nicht von Bedeutung, wie langsam du gehst, solange du nicht stehen bleibst.â€œ",
+    "kategorie": "Durchhalten und Erfolg",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Durchhalten5.jpg"
+  },
+  {
+    "id": 21,
+    "spruch": "â€žDass etwas immer so gewesen ist, heiÃŸt nicht, dass es immer so bleiben muss.â€œ",
+    "kategorie": "VerÃ¤nderungen anpacken",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Veraenderung1.jpg"
+  },
+  {
+    "id": 22,
+    "spruch": "â€žEs gibt zwei Arten, Schwierigkeiten zu begegnen: Entweder du Ã¤nderst die Schwierigkeiten oder du Ã¤nderst dich.â€œ",
+    "kategorie": "VerÃ¤nderungen anpacken",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Veraenderung2.jpg"
+  },
+  {
+    "id": 23,
+    "spruch": "â€žEin Schiff ist sicherer, wenn es im Hafen liegt. Aber dafÃ¼r werden Schiffe nicht gebaut.â€œ",
+    "kategorie": "VerÃ¤nderungen anpacken",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Veraenderung3.jpg"
+  },
+  {
+    "id": 24,
+    "spruch": "â€žDu kannst einen See nicht dadurch durchqueren, dass du nur dastehst und auf das Wasser schaust.â€œ",
+    "kategorie": "VerÃ¤nderungen anpacken",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Veraenderung4.jpg"
+  },
+  {
+    "id": 25,
+    "spruch": "â€žWenn der Wind der VerÃ¤nderung weht, bauen die einen Mauern und die anderen WindmÃ¼hlen.â€œ",
+    "kategorie": "VerÃ¤nderungen anpacken",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Veraenderung5.jpg"
+  },
+  {
+    "id": 26,
+    "spruch": "â€žLove it, change it or leave it.â€œ",
+    "kategorie": "Englische MotivationssprÃ¼che",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Englisch1.jpg"
+  },
+  {
+    "id": 27,
+    "spruch": "â€žOnly you and you alone can change your situation. Donâ€™t blame it on anything or anyone.â€œ",
+    "kategorie": "Englische MotivationssprÃ¼che",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Englisch2.jpg"
+  },
+  {
+    "id": 28,
+    "spruch": "â€žYou may never know what results come of your actions, but if you do nothing, there will be no results.â€œ",
+    "kategorie": "Englische MotivationssprÃ¼che",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Englisch3.jpg"
+  },
+  {
+    "id": 29,
+    "spruch": "â€žPush yourself because noone else is going to do it for you.â€œ",
+    "kategorie": "Englische MotivationssprÃ¼che",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Englisch4.jpg"
+  },
+  {
+    "id": 30,
+    "spruch": "â€žLosers quit when theyâ€™re tired. Winners quit when theyâ€™ve won.â€œ",
+    "kategorie": "Englische MotivationssprÃ¼che",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Englisch5.jpg"
+  },
+  {
+    "id": 31,
+    "spruch": "â€žHirn konnte keine Verbindung zur Arbeit herstellen. Bitte Motivation prÃ¼fen.â€œ",
+    "kategorie": "Humorvolle MotivationssprÃ¼che",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Humor1.jpg"
+  },
+  {
+    "id": 32,
+    "spruch": "â€žEin Diamant ist ein StÃ¼ck Kohle, das Ausdauer hatte.â€œ",
+    "kategorie": "Humorvolle MotivationssprÃ¼che",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Humor2.jpg"
+  },
+  {
+    "id": 33,
+    "spruch": "â€žWer am Morgen zerknittert aufwacht, hat am Tag die besten EntfaltungsmÃ¶glichkeiten!â€œ",
+    "kategorie": "Humorvolle MotivationssprÃ¼che",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Humor3.jpg"
+  },
+  {
+    "id": 34,
+    "spruch": "â€žArbeite an dir selbst, nicht an deinem Selfie.â€œ",
+    "kategorie": "Humorvolle MotivationssprÃ¼che",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Humor4.jpg"
+  },
+  {
+    "id": 35,
+    "spruch": "â€žIch grÃ¼ÃŸ mich mittlerweile recht freundlich, wenn ich mir im Weg steh. Ist ja nicht das erste Treffen.â€œ",
+    "kategorie": "Humorvolle MotivationssprÃ¼che",
+    "bild": "https://public.syntax-institut.de/apps/batch4/Marcel/pics/Humor5.jpg"
+  }
+]

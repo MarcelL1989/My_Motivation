@@ -31,9 +31,10 @@ class HomeFragment: Fragment() {
         val recyclerView = binding.homeRecycler
         val categoryAdapter = CategoryCardAdapter()
         recyclerView.adapter = categoryAdapter
-        var cardList = repository.loadcategorycard()
-        categoryAdapter.update(cardList)
         val snapHelper = PagerSnapHelper()
         snapHelper.attachToRecyclerView(binding.homeRecycler)
+        var cardList = repository.loadcategorycard()
+        categoryAdapter.update(cardList)
+
     }
 }

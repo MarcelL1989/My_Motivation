@@ -3,6 +3,7 @@ package com.example.my_motivation.data.remote
 import com.example.my_motivation.R
 import com.example.my_motivation.data.model.Categorycard
 
+//todo Repository Parameter geben für Api
 class Repository {
     fun loadcategorycard(): List<Categorycard> {
         return listOf(

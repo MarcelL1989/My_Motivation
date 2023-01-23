@@ -11,8 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/homepicture"
-        android:fitsSystemWindows="false"
-        >
+        android:fitsSystemWindows="true">
 
         <TextView
             android:id="@+id/textView"
@@ -35,15 +34,15 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/homeRecycler"
-            android:layout_width="407dp"
-            android:layout_height="331dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="44dp"
             android:orientation="horizontal"
+            android:scrollbarSize="5dp"
+            android:scrollbarThumbHorizontal="@color/white"
             android:scrollbars="horizontal"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-            android:scrollbarThumbHorizontal="@color/white"
-            android:scrollbarSize="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textView2"
@@ -61,7 +60,7 @@
             android:fontFamily="sans-serif-smallcaps"
             android:text="Wofür möchtest du heute motiviert werden?"
             android:textAlignment="center"
-            android:textSize="20sp"
+            android:textSize="23sp"
             android:textStyle="bold|italic"
             android:typeface="normal"
             app:layout_constraintEnd_toEndOf="parent"
