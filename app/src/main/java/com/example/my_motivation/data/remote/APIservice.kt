@@ -1,15 +1,15 @@
 package com.example.my_motivation.data.remote
 
+import com.example.my_motivation.data.model.Detailcard
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 
-interface API  {
+interface APIservice {
     @GET
-    suspend fun getResponse():
-
+    suspend fun getResponse(): List<Detailcard>
 }
 const val BASE_URL = "https://public.syntax-institut.de/apps/batch4/Marcel/data.json"
 
@@ -22,5 +22,5 @@ private val retrofit = Retrofit.Builder()
     .baseUrl(BASE_URL)
     .build()
 object MotivationApi {
-    val retrofitService: API by lazy { retrofit.create(API::class.java) }
+    val retrofitService: APIservice by lazy { retrofit.create(APIservice::class.java) }
 }
