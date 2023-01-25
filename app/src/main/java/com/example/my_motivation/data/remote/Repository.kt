@@ -2,9 +2,16 @@ package com.example.my_motivation.data.remote
 
 import com.example.my_motivation.R
 import com.example.my_motivation.data.model.Categorycard
+import com.example.my_motivation.data.model.Detailcard
 
-//todo Repository Parameter geben für Api
-class Repository {
+class Repository(val api: MotivationApi){
+
+    var detailCards: List<Detailcard> = listOf()
+
+    suspend fun loadDetailcard(){
+         detailCards = api.retrofitService.getResponse()
+
+    }
     fun loadcategorycard(): List<Categorycard> {
         return listOf(
         Categorycard(
