@@ -1,5 +1,6 @@
 package com.example.my_motivation.ui
 
+import MainviewModel
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +11,7 @@ import com.example.my_motivation.databinding.FragmentDetailBinding
 
 class DetailFragment: Fragment() {
     lateinit var binding: FragmentDetailBinding
-    //val viewModel: MainviewModel by viewModels()
+    val viewModel: MainviewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,

@@ -1,33 +1,42 @@
 package com.example.my_motivation.data.remote
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.example.my_motivation.R
 import com.example.my_motivation.data.model.Categorycard
 import com.example.my_motivation.data.model.Detailcard
 
-class Repository(val api: MotivationApi){
+class Repository {
 
-    var detailCards: List<Detailcard> = listOf()
-
-    suspend fun loadDetailcard(){
-         detailCards = api.retrofitService.getResponse()
+    suspend fun loadDetailcard(): List<Detailcard> {
+        return MotivationApi.retrofitService.getResponse()
 
     }
+
     fun loadcategorycard(): List<Categorycard> {
         return listOf(
-        Categorycard(
-            "Alltag", R.drawable.alltagkategorie),
             Categorycard(
-                "Durchhalten und Erfolg", R.drawable.durchhaltenunderfolgkategorie),
+                "Alltag", R.drawable.alltagkategorie
+            ),
             Categorycard(
-                "Mut", R.drawable.mutkategorie),
+                "Durchhalten und Erfolg", R.drawable.durchhaltenunderfolgkategorie
+            ),
             Categorycard(
-                "Sport", R.drawable.sportkategorie),
+                "Mut", R.drawable.mutkategorie
+            ),
             Categorycard(
-                "Veränderungen anpacken", R.drawable.veraenderungkategorie),
+                "Sport", R.drawable.sportkategorie
+            ),
             Categorycard(
-                "Englische Motivationssprüche", R.drawable.englischkategorie),
+                "Veränderungen anpacken", R.drawable.veraenderungkategorie
+            ),
             Categorycard(
-                "Humorvolle Motivationssprüche", R.drawable.humorkategorie)
+                "Englische Motivationssprüche", R.drawable.englischkategorie
+            ),
+            Categorycard(
+                "Humorvolle Motivationssprüche", R.drawable.humorkategorie
             )
+        )
     }
 }
+

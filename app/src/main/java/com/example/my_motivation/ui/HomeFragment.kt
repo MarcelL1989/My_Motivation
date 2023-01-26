@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.PagerSnapHelper
-import com.example.my_motivation.R
 import com.example.my_motivation.data.adapter.CategoryCardAdapter
 import com.example.my_motivation.data.remote.Repository
 import com.example.my_motivation.databinding.FragmentHomeBinding
