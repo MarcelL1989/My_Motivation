@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 
 class MainviewModel: ViewModel() {
 
-
+    var repository= Repository()
     private var _detailCards = MutableLiveData<List<Detailcard>>()
     val detailCards: LiveData<List<Detailcard>>
         get() = _detailCards
@@ -17,9 +17,8 @@ class MainviewModel: ViewModel() {
 
     fun loadDetailCards() {
         viewModelScope.launch {
-          _detailCards.value = Repository().loadDetailcard()
+          _detailCards.value = repository.loadDetailcard()
         }
     }
-
-        }
+}
 
