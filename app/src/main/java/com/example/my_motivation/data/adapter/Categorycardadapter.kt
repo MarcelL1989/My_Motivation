@@ -5,9 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.my_motivation.R
 import com.example.my_motivation.data.model.Categorycard
+import com.example.my_motivation.ui.HomeFragmentDirections
 import com.squareup.picasso.Picasso
 
 class CategoryCardAdapter(): RecyclerView.Adapter<CategoryCardAdapter.ItemViewHolder>() {
@@ -31,9 +33,17 @@ class CategoryCardAdapter(): RecyclerView.Adapter<CategoryCardAdapter.ItemViewHo
         var category= dataset[position]
         Picasso.get().load(category.picture).fit().centerInside().into(holder.iv)
         holder.text.text = category.text
+        holder.iv.setOnClickListener {
+            holder.itemView.findNavController().navigate(
+                HomeFragmentDirections.actionHomeFragmentToDetailFragment(
+                    category.detailCardsId.random()
+                )
+
+            )
+        }
 
 
-        //holder.iv.load(meme.url)
+
     }
     override fun getItemCount(): Int {
         return dataset.size

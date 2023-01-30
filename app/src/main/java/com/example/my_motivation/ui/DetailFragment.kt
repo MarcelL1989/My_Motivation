@@ -8,6 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.LifecycleOwner
+import androidx.navigation.fragment.findNavController
+import coil.load
 import com.example.my_motivation.databinding.FragmentDetailBinding
 
 class DetailFragment: Fragment() {
@@ -24,6 +27,19 @@ class DetailFragment: Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.loadDetailCards()
+         viewModel.loadDetailCards()
+       var detailId= requireArguments().getInt("categoryid")
+        viewModel.detailCards.observe(viewLifecycleOwner) {
+          var detailCard= it.find { detailcard ->
+                detailcard.id==detailId
+            }
+            if (detailCard != null) {
+                binding.motivationalPicture.load(detailCard.bild)
+            }
+        }
+        binding.backButton.setOnClickListener {
+            findNavController().navigateUp()
+        }
     }
+
 }

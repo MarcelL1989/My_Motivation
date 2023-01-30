@@ -8,10 +8,10 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 
 interface APIservice {
-    @GET
+    @GET("data.json")
     suspend fun getResponse(): List<Detailcard>
 }
-const val BASE_URL = "https://public.syntax-institut.de/apps/batch4/Marcel/data.json"
+const val BASE_URL = "https://public.syntax-institut.de/apps/batch4/Marcel/"
 
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())

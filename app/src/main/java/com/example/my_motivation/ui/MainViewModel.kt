@@ -2,6 +2,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.my_motivation.data.model.Categorycard
 import com.example.my_motivation.data.model.Detailcard
 import com.example.my_motivation.data.remote.Repository
 
@@ -19,6 +20,9 @@ class MainviewModel: ViewModel() {
         viewModelScope.launch {
           _detailCards.value = repository.loadDetailcard()
         }
+    }
+    fun loadCategoryCards(): List<Categorycard> {
+       return repository.loadcategorycard()
     }
 }
 
