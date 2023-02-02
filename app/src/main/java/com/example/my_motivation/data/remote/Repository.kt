@@ -16,7 +16,7 @@ class Repository(var database: FavoritesDatabase) {
         database.favorites.insert(detailcard)
     }
     suspend fun delete(detailcard: Detailcard) {
-        database.favorites.delete(detailcard)
+        database.favorites.delete(detailcard.id)
     }
     suspend fun loadDetailcard(): List<Detailcard> {
         return MotivationApi.retrofitService.getResponse()
@@ -29,7 +29,7 @@ class Repository(var database: FavoritesDatabase) {
             ),
             Categorycard(
                 "Durchhalten und Erfolg", R.drawable.durchhaltenunderfolgkategorie,
-                listOf(6,7,8,9,10)
+                listOf(16,17,18,19,20)
             ),
             Categorycard(
                 "Mut", R.drawable.mutkategorie,
@@ -37,7 +37,7 @@ class Repository(var database: FavoritesDatabase) {
             ),
             Categorycard(
                 "Sport", R.drawable.sportkategorie,
-                listOf(16,17,18,19,20)
+                listOf(6,7,8,9,10)
             ),
             Categorycard(
                 "Veränderungen anpacken", R.drawable.veraenderungkategorie,
