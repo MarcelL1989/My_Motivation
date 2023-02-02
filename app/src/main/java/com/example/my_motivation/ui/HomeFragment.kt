@@ -15,7 +15,7 @@ import com.example.my_motivation.databinding.FragmentHomeBinding
 class HomeFragment: Fragment() {
     lateinit var binding: FragmentHomeBinding
       val viewModel: MainviewModel by viewModels()
-        var repository = Repository()
+
 
 
         override fun onCreateView(

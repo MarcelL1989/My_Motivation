@@ -3,16 +3,24 @@ package com.example.my_motivation.data.remote
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.my_motivation.R
+import com.example.my_motivation.data.local.FavoritesDatabase
+import com.example.my_motivation.data.local.getDatabase
 import com.example.my_motivation.data.model.Categorycard
 import com.example.my_motivation.data.model.Detailcard
 
-class Repository {
+class Repository(var database: FavoritesDatabase) {
+    var favorites=  database.favorites.getAll()
 
+
+    suspend fun insertFavorites(detailcard: Detailcard) {
+        database.favorites.insert(detailcard)
+    }
+    suspend fun delete(detailcard: Detailcard) {
+        database.favorites.delete(detailcard)
+    }
     suspend fun loadDetailcard(): List<Detailcard> {
         return MotivationApi.retrofitService.getResponse()
-
     }
-
     fun loadcategorycard(): List<Categorycard> {
         return listOf(
             Categorycard(
