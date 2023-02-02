@@ -38,12 +38,8 @@ class CategoryCardAdapter(): RecyclerView.Adapter<CategoryCardAdapter.ItemViewHo
                 HomeFragmentDirections.actionHomeFragmentToDetailFragment(
                     category.detailCardsId.random()
                 )
-
             )
         }
-
-
-
     }
     override fun getItemCount(): Int {
         return dataset.size
