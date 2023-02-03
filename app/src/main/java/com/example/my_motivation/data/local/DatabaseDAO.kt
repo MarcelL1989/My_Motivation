@@ -13,6 +13,6 @@ interface DatabaseDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(detailcard: Detailcard)
 
-    @Delete
-    suspend fun delete(detailcard: Detailcard)
+    @Query("DELETE FROM Detailcard WHERE id = :iid")
+    suspend fun delete(iid:Int)
 }
