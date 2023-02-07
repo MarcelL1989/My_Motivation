@@ -1,52 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/imageView"
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        app:srcCompat="@drawable/favoritenbild"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-42dp" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Favoriten"
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        android:typeface="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.071"
+        <ImageView
+            android:id="@+id/favPicture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/favoritenbild"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-42dp" />
 
-        />
+        <TextView
+            android:id="@+id/favtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Favoriten"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:typeface="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.071"
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="365dp"
-        android:layout_height="532dp"
-        android:layout_marginTop="84dp"
-        android:scrollbars="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+            />
 
-        app:layout_constraintVertical_bias="0.0"
-        tools:itemCount="3"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/favoritenRecycler"
+            android:layout_width="365dp"
+            android:layout_height="532dp"
+            android:layout_marginTop="84dp"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
 
-        tools:listitem="@layout/favorititem" />
+            app:layout_constraintTop_toBottomOf="@+id/favtext"
+            app:layout_constraintVertical_bias="0.0"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            tools:itemCount="3"
+            tools:listitem="@layout/favorititem" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
