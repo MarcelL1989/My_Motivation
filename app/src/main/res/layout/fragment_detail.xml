@@ -36,18 +36,22 @@
 
         <TextView
             android:id="@+id/Motivationsspruch"
-            android:layout_width="348dp"
-            android:layout_height="304dp"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:shadowColor="#0B0A0A"
+            android:shadowDx="-1"
+            android:shadowRadius="35"
             android:text="Motivationsspruch"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="34sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/motivational_picture"
             app:layout_constraintHorizontal_bias="0.483"
             app:layout_constraintStart_toStartOf="@+id/motivational_picture"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:shadowDy="-1" />
 
         <ImageButton
             android:id="@+id/fav_btn"
