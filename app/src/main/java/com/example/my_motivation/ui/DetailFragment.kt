@@ -37,10 +37,10 @@ class DetailFragment : Fragment() {
         }
         return binding.root
     }
-    override fun onResume() {
-        super.onResume()
-        binding.favBtn.colorFilter = PorterDuffColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN)
-    }
+    //override fun onResume() {
+       // super.onResume()
+       // binding.favBtn.colorFilter = PorterDuffColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN)
+    ////}
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -60,7 +60,19 @@ class DetailFragment : Fragment() {
             findNavController().navigateUp()
         }
 
-        viewModel.favoritesList.observe(viewLifecycleOwner) {
+        binding.favBtn.setOnClickListener {
+            if (detailCard.state==false) {
+                detailCard.state = true
+                binding.favBtn.setColorFilter(clickedColor)
+                viewModel.insertFavorites(detailCard)
+            }else{
+                detailCard.state = false
+                binding.favBtn.setColorFilter(unclickedColor)
+                viewModel.insertFavorites(detailCard)
+            }
+        }
+
+        /*viewModel.favoritesList.observe(viewLifecycleOwner) {
             binding.favBtn.setOnClickListener {
                     v->
                 var favorites= it.find {
@@ -81,7 +93,7 @@ class DetailFragment : Fragment() {
                     Log.d("uuuuuu",favorites.toString())
                 }
             }
-        }
+        }*/
     }
     private fun getCorrectFavBtnColor(detailcard: Detailcard) {
         if (detailcard.state == null){
