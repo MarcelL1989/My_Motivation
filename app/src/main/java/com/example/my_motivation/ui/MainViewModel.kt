@@ -8,6 +8,7 @@ import com.example.my_motivation.data.remote.Repository
 import kotlinx.coroutines.launch
 
 class MainviewModel(application: Application) : AndroidViewModel(application)  {
+    var favButtonState = false
     var database= getDatabase(application)
     var repository= Repository(database)
     private var _detailCards = MutableLiveData<List<Detailcard>>()
