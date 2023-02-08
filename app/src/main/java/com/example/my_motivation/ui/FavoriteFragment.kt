@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.PagerSnapHelper
@@ -16,7 +17,7 @@ import com.example.my_motivation.databinding.FragmentHomeBinding
 
 class FavoriteFragment: Fragment() {
     lateinit var binding: FragmentFavoritenBinding
-    val viewModel: MainviewModel by viewModels()
+    val viewModel: MainviewModel by activityViewModels()
 
 
 
@@ -31,9 +32,13 @@ class FavoriteFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var recycler= binding.favoritenRecycler
-        var favoriteAdapter = viewModel.favoritesList.value?.let { FavoriteAdapter(it) }
+        val recycler= binding.favoritenRecycler
+       val favoriteAdapter = FavoriteAdapter()
         recycler.adapter = favoriteAdapter
+
+        viewModel.favoritesList.observe(viewLifecycleOwner) {
+            favoriteAdapter.submitList(it)
+        }
 
 
 

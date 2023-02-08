@@ -10,12 +10,18 @@ import coil.load
 import com.example.my_motivation.R
 import com.example.my_motivation.data.model.Detailcard
 
-class FavoriteAdapter(private val dataSet: List<Detailcard>): RecyclerView.Adapter<FavoriteAdapter.ItemViewHolder>() {
+class FavoriteAdapter(): RecyclerView.Adapter<FavoriteAdapter.ItemViewHolder>() {
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var text: TextView = itemView.findViewById(R.id.favourite_txt)
         var iv: ImageView = itemView.findViewById(R.id.favourite_pic)
 
     }
+    private var dataSet= listOf<Detailcard>()
+    fun submitList(newList:List<Detailcard>) {
+        dataSet= newList
+        notifyDataSetChanged()
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         var listItem: View =
             LayoutInflater.from(parent.context).inflate(R.layout.favorititem, parent, false)

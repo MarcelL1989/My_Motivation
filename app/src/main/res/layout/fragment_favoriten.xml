@@ -52,6 +52,7 @@
 
             app:layout_constraintTop_toBottomOf="@+id/favtext"
             app:layout_constraintVertical_bias="0.0"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
 
             tools:itemCount="3"
             tools:listitem="@layout/favorititem" />

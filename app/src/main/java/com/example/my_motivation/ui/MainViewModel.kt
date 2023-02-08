@@ -26,13 +26,6 @@ class MainviewModel(application: Application) : AndroidViewModel(application)  {
             repository.delete(detailcard)
         }
     }
-
-
-
-
-
-
-
     fun loadDetailCards() {
         viewModelScope.launch {
           _detailCards.value = repository.loadDetailcard()
