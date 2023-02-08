@@ -10,7 +10,7 @@ import coil.load
 import com.example.my_motivation.R
 import com.example.my_motivation.data.model.Detailcard
 
-class ItemAdapter(private val dataSet: List<Detailcard>): RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
+class FavoriteAdapter(private val dataSet: List<Detailcard>): RecyclerView.Adapter<FavoriteAdapter.ItemViewHolder>() {
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var text: TextView = itemView.findViewById(R.id.favourite_txt)
         var iv: ImageView = itemView.findViewById(R.id.favourite_pic)

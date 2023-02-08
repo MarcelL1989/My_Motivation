@@ -7,8 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.PagerSnapHelper
 import com.example.my_motivation.data.adapter.CategoryCardAdapter
+import com.example.my_motivation.data.adapter.FavoriteAdapter
 import com.example.my_motivation.databinding.FragmentFavoritenBinding
 import com.example.my_motivation.databinding.FragmentHomeBinding
 
@@ -29,5 +31,14 @@ class FavoriteFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        var recycler= binding.favoritenRecycler
+        var favoriteAdapter = viewModel.favoritesList.value?.let { FavoriteAdapter(it) }
+        recycler.adapter = favoriteAdapter
+
+
+
+        binding.backtomenubtn.setOnClickListener{
+            findNavController().navigateUp()
+        }
     }
 }

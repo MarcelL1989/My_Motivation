@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.PagerSnapHelper
 import com.example.my_motivation.data.adapter.CategoryCardAdapter
 import com.example.my_motivation.data.remote.Repository
@@ -36,6 +37,11 @@ class HomeFragment: Fragment() {
         snapHelper.attachToRecyclerView(binding.homeRecycler)
         var cardList = viewModel.loadCategoryCards()
         categoryAdapter.update(cardList)
+        binding.favlistbtn.setOnClickListener {
+            findNavController().navigate(
+                HomeFragmentDirections.actionHomeFragmentToFavoriteFragment()
+            )
+        }
 
     }
 }

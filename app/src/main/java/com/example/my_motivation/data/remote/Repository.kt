@@ -14,9 +14,11 @@ class Repository(var database: FavoritesDatabase) {
 
     suspend fun insertFavorites(detailcard: Detailcard) {
         database.favorites.insert(detailcard)
+
     }
     suspend fun delete(detailcard: Detailcard) {
         database.favorites.delete(detailcard.id)
+
     }
     suspend fun loadDetailcard(): List<Detailcard> {
         return MotivationApi.retrofitService.getResponse()
