@@ -18,7 +18,7 @@
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/favoritenbild"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="-42dp" />
+            tools:layout_editor_absoluteY="-16dp" />
 
         <TextView
             android:id="@+id/favtext"
@@ -55,6 +55,17 @@
 
             tools:itemCount="3"
             tools:listitem="@layout/favorititem" />
+
+        <ImageButton
+            android:id="@+id/backtomenubtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/favtext"
+            app:layout_constraintEnd_toStartOf="@+id/favtext"
+            app:layout_constraintTop_toTopOf="@+id/favtext"
+            app:layout_constraintVertical_bias="0.466"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

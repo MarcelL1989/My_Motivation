@@ -22,4 +22,8 @@
             android:name="categoryid"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.my_motivation.ui.FavoriteFragment"
+        android:label="FavoriteFragment" />
 </navigation>
