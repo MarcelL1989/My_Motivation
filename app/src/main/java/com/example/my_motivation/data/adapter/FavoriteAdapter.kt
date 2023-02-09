@@ -5,10 +5,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.my_motivation.R
 import com.example.my_motivation.data.model.Detailcard
+import com.example.my_motivation.ui.FavoriteFragmentDirections
+import com.example.my_motivation.ui.HomeFragmentDirections
 
 class FavoriteAdapter(): RecyclerView.Adapter<FavoriteAdapter.ItemViewHolder>() {
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -32,13 +35,14 @@ class FavoriteAdapter(): RecyclerView.Adapter<FavoriteAdapter.ItemViewHolder>() 
         var currentFavourite = dataSet[position]
         holder.text.text = currentFavourite.spruch
         holder.iv.load(currentFavourite.bild)
+        holder.iv.setOnClickListener {
+            holder.itemView.findNavController().navigate(
+                FavoriteFragmentDirections.actionFavoriteFragmentToDetailFragment(currentFavourite.id)
+            )
 
+        }
     }
-
     override fun getItemCount(): Int {
         return dataSet.size
-
     }
-
-
 }
