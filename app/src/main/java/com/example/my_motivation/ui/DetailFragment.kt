@@ -37,11 +37,6 @@ class DetailFragment : Fragment() {
         }
         return binding.root
     }
-    //override fun onResume() {
-       // super.onResume()
-       // binding.favBtn.colorFilter = PorterDuffColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN)
-    ////}
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -51,62 +46,38 @@ class DetailFragment : Fragment() {
             detailCard = it.find { detailcard ->
                 detailcard.id == detailId
             }!!
+
             getCorrectFavBtnColor(detailCard)
             binding.motivationalPicture.load(detailCard.bild)
             binding.Motivationsspruch.text = detailCard.spruch
-
         }
         binding.backButton.setOnClickListener {
             findNavController().navigateUp()
         }
 
         binding.favBtn.setOnClickListener {
-            if (detailCard.state==false) {
-                detailCard.state = true
-                binding.favBtn.setColorFilter(clickedColor)
-                viewModel.insertFavorites(detailCard)
-            }else{
-                detailCard.state = false
-                binding.favBtn.setColorFilter(unclickedColor)
-                viewModel.insertFavorites(detailCard)
+            viewModel.favoritesList.value?.let { favoritesList ->
+                if (favoritesList.contains(detailCard)) {
+                    viewModel.deleteFavorites(detailCard)
+                    binding.favBtn.setColorFilter(unclickedColor)
+                } else {
+
+                    viewModel.insertFavorites(detailCard)
+                    binding.favBtn.setColorFilter(clickedColor)
+                }
             }
         }
-
-        /*viewModel.favoritesList.observe(viewLifecycleOwner) {
-            binding.favBtn.setOnClickListener {
-                    v->
-                var favorites= it.find {
-                    it.id==detailCard.id
-                }
-                if (favorites!=null) {
-                    viewModel.favButtonState = false
-                    favorites.state = false
-                    binding.favBtn.setColorFilter(unclickedColor)
-                    viewModel.deleteFavorites(detailCard)
-                    Log.d("yooo",favorites.toString())
-
-                }else{
-                    viewModel.favButtonState = true
-                    favorites = detailCard.copy(state = true)
-                    binding.favBtn.setColorFilter(clickedColor)
-                    viewModel.insertFavorites(detailCard)
-                    Log.d("uuuuuu",favorites.toString())
-                }
-            }
-        }*/
     }
     private fun getCorrectFavBtnColor(detailcard: Detailcard) {
-        if (detailcard.state == null){
-            binding.favBtn.setColorFilter(unclickedColor)
-        }
-        else if (detailcard.state == true) {
-            binding.favBtn.setColorFilter(clickedColor)
-        }
-        else if (detailcard.state == false){
-            binding.favBtn.setColorFilter(unclickedColor)
+        viewModel.favoritesList.observe(viewLifecycleOwner){
+            if (it.contains(detailcard)){
+                binding.favBtn.setColorFilter(clickedColor)
+            }
+            else {
+                binding.favBtn.setColorFilter(unclickedColor)
+            }
         }
 
     }
 
-    }
-
+}

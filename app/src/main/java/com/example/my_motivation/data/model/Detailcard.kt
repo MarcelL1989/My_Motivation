@@ -11,7 +11,6 @@ data class Detailcard (
     val bild: String,
     val spruch: String,
     val kategorie: String,
-    var state: Boolean?,
     @PrimaryKey
     val id: Int
 )
